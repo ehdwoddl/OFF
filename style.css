@@ -1,0 +1,608 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Pretendard',sans-serif;
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:1080px;
+    overflow:hidden;
+}
+
+.hero::after{
+    content:'';
+
+    position:absolute;
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:250px;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.3) 30%,
+        rgba(0,0,0,0.7) 70%,
+        #000 100%
+    );
+
+    pointer-events:none;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.9) 0%,
+        rgba(0,0,0,.6) 40%,
+        rgba(0,0,0,.15) 100%
+    );
+}
+
+.hero-content{
+    position:absolute;
+    left:100px;
+    bottom:250px;
+    z-index:10;
+}
+
+.hero h1{
+    font-size:96px;
+    font-weight:700;
+    line-height:1;
+    letter-spacing:-0.03em;
+    margin-bottom:40px;
+}
+
+.hero p{
+    font-size:24px;
+    line-height:1.7;
+    opacity:.9;
+}
+
+/* =========================
+   ON OFF
+========================= */
+
+.onoff-section{
+    width:100%;
+    padding:220px 0;
+}
+
+.onoff-card{
+    width:1100px;
+    margin:0 auto;
+
+    text-align:center;
+}
+
+.state-label{
+    font-size:48px;
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.state-label.on{
+    color:#4D73FF;
+}
+
+.state-label.off{
+    color:#4D73FF;
+}
+
+.state-text{
+    font-size:40px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.state-desc{
+    font-size:18px;
+    color:#999;
+
+    margin-bottom:50px;
+
+    line-height:1.8;
+}
+
+#stateImage{
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border-radius:24px;
+}
+
+/* =========================
+   공통
+========================= */
+
+.section-title{
+    color:#517BE4;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+.vertical-line{
+    width:1px;
+
+    height:0;
+
+    background:#666;
+
+    margin:0 auto 120px;
+
+    position:relative;
+
+    transition:height 1.2s ease;
+}
+
+.vertical-line span{
+    position:absolute;
+
+    left:50%;
+    bottom:-10px;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    transform:translateX(-50%);
+}
+
+/* =========================
+   LOST SOUNDS
+========================= */
+
+.lost-sounds{
+    width:100%;
+    padding-top:120px;
+}
+
+.lost-sounds h2{
+    text-align:center;
+    font-size:36px;
+    font-weight:400;
+    line-height:1.6;
+
+    margin-bottom:320px;
+}
+
+.lost-sounds h2 span{
+    font-size:48px;
+    font-weight:900;
+}
+
+.sounds-wrap{
+    width:1720px;
+    height:1450px;
+
+    margin:80px auto 0;
+
+    position:relative;
+}
+
+.sound-card{
+    width:393px;
+    position:absolute;
+}
+
+.sound-card:nth-child(1){
+    left:180px;
+    top:0;
+}
+
+.sound-card:nth-child(2){
+    left:1050px;
+    top:220px;
+}
+
+.sound-card:nth-child(3){
+    left:450px;
+    top:500px;
+}
+
+.sound-card:nth-child(4){
+    left:1230px;
+    top:760px;
+}
+
+.sound-card.left,
+.sound-card.right{
+    align-self:unset;
+}
+
+.mini-line{
+    width:1px;
+    height:120px;
+
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.8) 0,
+        rgba(255,255,255,.8) 6px,
+        transparent 6px,
+        transparent 12px
+    );
+
+    margin:0 auto 32px;
+}
+
+.sound-card img{
+    width:393px;
+    height:294px;
+    object-fit:cover;
+}
+
+.sound-card p{
+    text-align:center;
+    margin-top:15px;
+    font-size:16px;
+}
+
+/* =========================
+   AIRPODS
+========================= */
+
+.airpods-section{
+    padding:260px 0;
+}
+
+.airpods-wrap{
+    position:relative;
+    width:538px;
+    margin:0 auto;
+}
+
+.airpods-wrap img{
+    width:100%;
+}
+
+.airpods-wrap h2{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    font-size:36px;
+    line-height:1.6;
+    font-weight:400;
+}
+
+/* =========================
+   MOOD
+========================= */
+
+.mood-section{
+    width:1720px;
+    margin:0 auto;
+    padding-top:200px;
+}
+
+.mood-copy{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:120px;
+}
+
+.mood-image{
+    width:100%;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-section{
+    width:1400px;
+    margin:220px auto;
+}
+
+.video-section h3{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:40px;
+}
+
+.video-box{
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    height:auto;
+
+    background:#555;
+
+    border-radius:16px;
+
+    overflow:hidden;
+}
+
+.video-box iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-section{
+    width:1720px;
+    margin:0 auto;
+    padding-top:200px;
+}
+
+.process-images{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+
+    margin-bottom:60px;
+}
+
+.process-images img{
+    width:100%;
+}
+
+.process-grid{
+    width:1720px;
+
+    display:grid;
+
+    grid-template-columns:
+    300px
+    300px
+    300px
+    300px
+    300px;
+
+    justify-content:space-between;
+
+    margin-top:60px;
+}
+
+.process-item{
+    text-align:left;
+}
+
+.process-item h4{
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+.process-item p{
+    font-size:15px;
+    line-height:1.7;
+    color:#bbb;
+}
+
+/* =========================
+   ENDING
+========================= */
+
+.ending{
+    padding:260px 0 420px;
+    text-align:center;
+}
+
+.ending-top{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.ending h2{
+    font-size:64px;
+    line-height:1.4;
+    font-weight:400;
+}
+
+.ending h2 span{
+    font-weight:900;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer{
+    width:1720px;
+    height:220px;
+
+    margin:0 auto 120px;
+
+    position:relative;
+}
+
+.footer-line{
+    width:100%;
+    height:1px;
+
+    background:#333;
+
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.footer-left{
+    position:absolute;
+
+    left:0;
+    top:60px;
+}
+
+.footer-left h3{
+    font-size:40px;
+    font-weight:700;
+
+    white-space:nowrap;
+
+    margin-bottom:20px;
+}
+
+.footer-left p{
+    font-size:15px;
+    color:#999;
+}
+
+.footer-right{
+    position:absolute;
+
+    right:0;
+    top:60px;
+
+    display:flex;
+    gap:180px;
+}
+
+.footer-right h4{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.footer-right p{
+    font-size:15px;
+    color:#999;
+    line-height:1.5;
+}
+
+.onoff-card{
+    width:1100px;
+    margin:0 auto;
+
+    text-align:center;
+
+    transition:opacity 1.5s ease;
+}
+
+.onoff-card.fade{
+    opacity:0;
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+
+    transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.intro-trigger .intro-text{
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.intro-trigger.show .vertical-line{
+    height:180px;
+}
+
+.intro-trigger.show .intro-text{
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition-delay:1s;
+}
+
+.mood-image{
+    width:100%;
+
+    clip-path:inset(0 100% 0 0);
+
+    transition:
+    clip-path 2s ease 0.8s;
+}
+
+.mood-section.show .mood-image{
+    clip-path:inset(0 0 0 0);
+}
+
+.ending .vertical-line{
+    height:0;
+}
+
+.ending-trigger .ending-text{
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.ending-trigger.show .vertical-line{
+    height:180px;
+}
+
+.ending-trigger.show .ending-text{
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition-delay:1s;
+}
